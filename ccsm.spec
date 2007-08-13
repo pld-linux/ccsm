@@ -12,6 +12,8 @@ BuildRequires:	libcompizconfig-devel >= %{version}
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-Pyrex
 BuildRequires:	rpm-pythonprov
+Requires:	compizconfig-python
+Requires:	python-pygtk-gtk
 Suggests:	python-sexy
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
