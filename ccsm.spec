@@ -41,7 +41,7 @@ python setup.py install \
 	--root $RPM_BUILD_ROOT \
 	--prefix %{_prefix}
 
-find $RPM_BUILD_ROOT%{py_sitescriptdir}/ccm -name '*.py' -exec rm -f {} \;
+%py_postclean %{py_sitescriptdir}/ccm
 
 %find_lang %{name}
 
