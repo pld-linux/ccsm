@@ -23,7 +23,7 @@ A fully featured Python/GTK based settings manager for the
 CompizConfig system.
 
 %description -l pl.UTF-8
-W pełni sprawny, oparty o Pythona/GTK menedżer ustawień dla systemu
+W pełni funkcjonalny, oparty o Pythona/GTK menedżer ustawień dla systemu
 CompizConfig.
 
 %prep
