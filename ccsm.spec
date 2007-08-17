@@ -2,11 +2,13 @@ Summary:	compizconfig-settings-manager
 Summary(pl.UTF-8):	compizconfig-settings-manager
 Name:		ccsm
 Version:	0.5.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	e267eaa2400d833bcc3da6383bf054ff
+Patch0:		%{name}-PL.patch
+Patch1:		%{name}-PT.patch
 URL:		http://forum.compiz-fusion.org/
 BuildRequires:	libcompizconfig-devel >= %{version}
 BuildRequires:	python-devel >= 1:2.5
@@ -28,6 +30,8 @@ CompizConfig.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
 
 %build
 python setup.py build \
