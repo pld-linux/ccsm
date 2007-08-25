@@ -12,6 +12,7 @@ Patch1:		%{name}-PT.patch
 URL:		http://forum.compiz-fusion.org/
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.234
 Requires:	compizconfig-python >= %{version}
 Requires:	python-pygtk-gtk >= 2:2.10.0
 Suggests:	python-sexy
