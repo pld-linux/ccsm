@@ -1,3 +1,4 @@
+# TODO: next time don't use patches to rename files
 Summary:	CompizConfig Settings Manager
 Summary(pl.UTF-8):	CompizConfig Settings Manager - zarządca ustawień konfiguracji compiza
 Name:		ccsm
@@ -13,7 +14,7 @@ URL:		http://forum.compiz-fusion.org/
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.234
-Requires:	compizconfig-python >= %{version}
+Requires:	python-compizconfig >= %{version}
 Requires:	python-pygtk-gtk >= 2:2.10.0
 Suggests:	python-sexy
 BuildArch:	noarch
@@ -24,7 +25,7 @@ A fully featured Python/GTK+ based settings manager for the
 CompizConfig system.
 
 %description -l pl.UTF-8
-W pełni funkcjonalny, oparty o Pythona/GTK+ menedżer ustawień dla
+W pełni funkcjonalny, oparty o Pythona/GTK+ zarządca ustawień dla
 systemu CompizConfig.
 
 %prep
@@ -33,13 +34,13 @@ systemu CompizConfig.
 %patch1 -p1
 
 %build
-python setup.py build \
+%{__python} setup.py build \
 	--prefix %{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install \
+%{__python} setup.py install \
 	--optimize=2 \
 	--root $RPM_BUILD_ROOT \
 	--prefix %{_prefix}
@@ -54,9 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/ccsm
-%{_desktopdir}/ccsm.desktop
 %{_datadir}/ccsm
-%{_iconsdir}/hicolor/scalable/apps/ccsm.svg
-%{_pixmapsdir}/ccsm.png
 %{py_sitescriptdir}/ccm
 %{py_sitescriptdir}/%{name}*.egg-info
+%{_desktopdir}/ccsm.desktop
+%{_iconsdir}/hicolor/scalable/apps/ccsm.svg
+%{_pixmapsdir}/ccsm.png
