@@ -10,7 +10,8 @@ Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
 URL:		http://forum.compiz-fusion.org/
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.234
+BuildRequires:	rpmbuild(macros) >= 1.311
+Requires(post,postun):	gtk+2
 Requires:	python-compizconfig >= %{version}
 Requires:	python-pygtk-gtk >= 2:2.10.0
 Suggests:	python-sexy
@@ -46,6 +47,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+%update_icon_cache hicolor
+
+%postun
+%update_icon_cache hicolor
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
