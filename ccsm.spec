@@ -1,15 +1,12 @@
-# TODO: next time don't use patches to rename files
 Summary:	CompizConfig Settings Manager
 Summary(pl.UTF-8):	CompizConfig Settings Manager - zarządca ustawień konfiguracji compiza
 Name:		ccsm
-Version:	0.5.2
-Release:	2
+Version:	0.6.0
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	e267eaa2400d833bcc3da6383bf054ff
-Patch0:		%{name}-PL.patch
-Patch1:		%{name}-PT.patch
+# Source0-md5:	3506549c13088d5e7dbbeaf2bea24fa2
 URL:		http://forum.compiz-fusion.org/
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
@@ -30,8 +27,6 @@ systemu CompizConfig.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 
 %build
 %{__python} setup.py build \
