@@ -61,11 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitescriptdir}/ccm
 %{py_sitescriptdir}/%{name}*.egg-info
 %{_desktopdir}/ccsm.desktop
-%{_iconsdir}/hicolor/scalable/apps/ccsm.svg
-%{_iconsdir}/hicolor/16x16/apps/ccsm.png
-%{_iconsdir}/hicolor/22x22/apps/ccsm.png
-%{_iconsdir}/hicolor/22x22/apps/ccsm.svg
-%{_iconsdir}/hicolor/24x24/apps/ccsm.png
-%{_iconsdir}/hicolor/32x32/apps/ccsm.png
-%{_iconsdir}/hicolor/32x32/apps/ccsm.svg
-%{_iconsdir}/hicolor/48x48/apps/ccsm.png
+%{_iconsdir}/hicolor/*/apps/ccsm.*
