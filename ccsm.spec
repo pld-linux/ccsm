@@ -1,3 +1,5 @@
+# TODO
+# +error: ccsm-0.7.4-1: req /usr/share/locale/md/LC_MESSAGES not found
 Summary:	CompizConfig Settings Manager
 Summary(pl.UTF-8):	CompizConfig Settings Manager - zarządca ustawień konfiguracji compiza
 Name:		ccsm
