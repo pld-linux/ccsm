@@ -1,10 +1,8 @@
-# TODO
-# +error: ccsm-0.7.4-1: req /usr/share/locale/md/LC_MESSAGES not found
 Summary:	CompizConfig Settings Manager
 Summary(pl.UTF-8):	CompizConfig Settings Manager - zarządca ustawień konfiguracji compiza
 Name:		ccsm
 Version:	0.7.4
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
@@ -45,6 +43,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %py_postclean %{py_sitescriptdir}/ccm
 
+# bad lang code
+mv $RPM_BUILD_ROOT%{_datadir}/locale/{md,man}
+# and uncupported by glibc (2.7)
+rm -f $RPM_BUILD_ROOT%{_datadir}/locale/man
 %find_lang %{name}
 
 %clean
