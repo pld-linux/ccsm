@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 # bad lang code
 mv $RPM_BUILD_ROOT%{_datadir}/locale/{md,man}
-# and uncupported by glibc (2.7)
+# and unsupported by glibc (2.7)
 rm -f $RPM_BUILD_ROOT%{_datadir}/locale/man
 %find_lang %{name}
 
