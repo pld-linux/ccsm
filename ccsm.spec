@@ -8,6 +8,8 @@ Group:		X11/Applications
 Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	c9773ec2e6ab9184c39756a365a9cd00
 URL:		http://forum.compiz-fusion.org/
+BuildRequires:	intltool
+BuildRequires:	gettext-devel
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.311
