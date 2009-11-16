@@ -1,13 +1,13 @@
 Summary:	CompizConfig Settings Manager
 Summary(pl.UTF-8):	CompizConfig Settings Manager - zarządca ustawień konfiguracji compiza
 Name:		ccsm
-Version:	0.8.2
+Version:	0.8.4
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	c9773ec2e6ab9184c39756a365a9cd00
-URL:		http://forum.compiz-fusion.org/
+Source0:	http://releases.compiz.org/%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	6bad7a02a91cc8fc9c4c48f83e91c08c
+URL:		http://www.compiz.org/
 BuildRequires:	intltool
 BuildRequires:	gettext-devel
 BuildRequires:	python-devel >= 1:2.5
@@ -48,7 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 # bad lang code
 mv $RPM_BUILD_ROOT%{_datadir}/locale/{md,man}
 # and unsupported by glibc (2.7)
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/man
+rm -r $RPM_BUILD_ROOT%{_datadir}/locale/man
+rm -r $RPM_BUILD_ROOT%{_datadir}/locale/ml_IN
 %find_lang %{name}
 
 %clean
