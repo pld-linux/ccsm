@@ -2,7 +2,7 @@ Summary:	CompizConfig Settings Manager
 Summary(pl.UTF-8):	CompizConfig Settings Manager - zarządca ustawień konfiguracji compiza
 Name:		ccsm
 Version:	0.8.4
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://releases.compiz.org/%{version}/%{name}-%{version}.tar.bz2
@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 mv $RPM_BUILD_ROOT%{_datadir}/locale/{md,man}
 # and unsupported by glibc (2.7)
 rm -r $RPM_BUILD_ROOT%{_datadir}/locale/man
-rm -r $RPM_BUILD_ROOT%{_datadir}/locale/ml_IN
+mv $RPM_BUILD_ROOT%{_datadir}/locale/ml{_IN,}
 %find_lang %{name}
 
 %clean
