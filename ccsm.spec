@@ -2,18 +2,19 @@ Summary:	CompizConfig Settings Manager
 Summary(pl.UTF-8):	CompizConfig Settings Manager - zarządca ustawień konfiguracji compiza
 Name:		ccsm
 Version:	0.8.4
-Release:	4
+Release:	5
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://releases.compiz.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	6bad7a02a91cc8fc9c4c48f83e91c08c
 URL:		http://www.compiz.org/
-BuildRequires:	intltool
 BuildRequires:	gettext-devel
+BuildRequires:	intltool
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.311
-Requires(post,postun):	gtk+2
+Requires(post,postun):	gtk-update-icon-cache
+Requires(post,postun):	hicolor-icon-theme
 Requires:	python-compizconfig >= %{version}
 Requires:	python-pygtk-gtk >= 2:2.10.0
 Suggests:	python-sexy
