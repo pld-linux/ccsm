@@ -8,7 +8,7 @@ Group:		X11/Applications
 Source0:	http://releases.compiz.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	6bad7a02a91cc8fc9c4c48f83e91c08c
 URL:		http://www.compiz.org/
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	intltool
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
