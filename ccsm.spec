@@ -33,14 +33,13 @@ systemu CompizConfig.
 %setup -q
 
 %build
-%{__python} setup.py build \
+%py_build \
 	--prefix %{_prefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__python} setup.py install \
-	--optimize=2 \
+%py_install \
 	--root $RPM_BUILD_ROOT \
 	--prefix %{_prefix}
 
